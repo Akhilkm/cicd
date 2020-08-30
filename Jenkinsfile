@@ -35,7 +35,7 @@ switch (BRANCH_NAME) {
 
 
 if (ENABLE_DEPLOY == 'true' ) {
-    node('ubuntu16-x86-64') {
+    node('master') {
         stage('Checkout') {
             checkout scm
             // checkoutSecureDeploy()
