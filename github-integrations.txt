@@ -1,0 +1,26 @@
+Part A configuration in GitHub
+
+    1) Go to your project repository.
+    2) Go to "settings" in the right corner.
+    3) Click on "webhooks."
+    4) Click "Add webhooks."
+    5) Write the Payload URL (Payload URL is the URL where our Jenkins is running add github-webhook to tell GitHub that it is a webhook.)
+
+    6) Check the below details:
+    Content type: What kind of data we want in our webhook. I have selected JSON data.
+    Secret: Used to secure our webhook we can provide a secret in our webhook and ensure that only applications having this webhooks can use it.
+    SSL verification: This SSL Checker will help you diagnose problems with your SSL certificate installation. You can verify the SSL certificate on your web server to make sure it is correctly installed, valid, trusted and doesn’t give any errors to any of your users.
+
+    7) Which events would you like to trigger this webhook?
+
+    Just the push event: Only send data when someone pushed into my repository.
+    Send me everything: If there is any pull or push event in our repository we will get notified.
+    Let me select individual events: We can configure for what events we want our data.
+    Click Create and a webhook will be created.
+
+Part B configuration in Jenkins
+
+    1) Go to Manage Jenkins -> Configure System
+    2) Scroll down and you will find the GitHub Pull Requests checkbox. In the Published Jenkins URL, add the repository link
+    3) Click on "Save."
+    4) Now go to the Jenkins pipeline and select "GitHub hook trigger for GITScm polling."

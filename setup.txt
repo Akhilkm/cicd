@@ -1,0 +1,6 @@
+1) Deploy the CFT template in AWS (This will create infrastrcute network and a bastion host)
+2) Create an ec2 machine and install Jenkins in it.
+3) Create a multi-branch-pipeline with this repository
+4) Use github-integrations.txt to integrate the job with the repository
+
+Note: this will build the script and deploy in jenkins itself
