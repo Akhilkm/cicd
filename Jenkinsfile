@@ -53,7 +53,7 @@ if (ENABLE_DEPLOY == 'true' ) {
 
         if (DEPLOY_ENV) {
             stage('Init') {
-                setupSecureTemp tmpDir: SECURE_TEMP,
+                setupTempDir tmpDir: SECURE_TEMP,
                         appName: APP_NAME,
                         deployEnv: DEPLOY_ENV,
                         deployVersion: DEPLOY_VERSION,
