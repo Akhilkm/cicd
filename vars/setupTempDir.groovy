@@ -10,5 +10,6 @@ def call(Map args) {
 	String deployVersion = args.deployVersion
     String deployCredentialsId = args.deployCredentialsId
 
-    sh "mkdir tmpDir"
+
+    sh "if [ -d "$tmpDir" ]; then echo "Directory  exists."; else mkdir $tmpDir; fi"
 }
